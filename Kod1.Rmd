@@ -1,0 +1,41 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+# R jako prosty kalkulator
+2+3^4-sin(35)*exp(3)
+
+# Przypisywanie wyników do zmiennych
+x <- 2+3
+print(x)
+
+z <- x^2+3
+print(z)
+
+# między chunkami powinna być minimum linijka przerwy
+```
+
+
+```{r}
+# tworzenie wektorów
+# tworzymy obiekty c()
+wzrost <- c(180, 190, 170, 160, 155, 160, 175, 179)
+print(wzrost)
+
+sum(wzrost) # 1369
+mean(wzrost) #171.125
+min(wzrost) #155
+max(wzrost) #190
+length(wzrost) #8
+sd(wzrost) # 12.07639, odchylenie standardowe
+median(wzrost) # 172.5
+quantile(wzrost) # kwartyle + min i max
+
+# seq(start, koniec, krok)
+quantile(wzrost, probs = seq(0.1, 0.9, 0.1)) # decyle
+# ?mean
+summary(wzrost)
+```
+
